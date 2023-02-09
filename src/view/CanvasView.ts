@@ -1,5 +1,6 @@
 import { Brick } from "../sprites/Brick";
 import { Paddle } from "../sprites/Paddle";
+import { Ball } from "../sprites/Ball";
 
 export class CanvasView {
   canvas: HTMLCanvasElement;
@@ -35,7 +36,7 @@ export class CanvasView {
     }
   }
 
-  drawSprite(brick: Brick | Paddle) {
+  drawSprite(brick: Brick | Paddle | Ball) {
     if (!brick) return;
 
     this.ctx?.drawImage(
